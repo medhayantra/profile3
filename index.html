@@ -29,11 +29,38 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .header .logo {
-            font-size: 1.5rem;
+        .header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .header .login-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .login-btn:hover {
+            background-color: #45a049;
+            color: #fff;
         }
 
         .nav ul {
@@ -42,10 +69,6 @@
             padding: 0;
             display: flex;
             gap: 15px;
-        }
-
-        .nav ul li {
-            display: inline;
         }
 
         .nav ul li a {
@@ -102,63 +125,42 @@
             color: #4CAF50;
         }
 
-        p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .product-list {
+        .team-container {
             display: flex;
-            gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .product {
-            background-color: #fff;
+        .team-member {
+            text-align: center;
+            background-color: #1ff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 200px;
         }
 
-        .product h3 {
-            font-size: 1.5rem;
-            color: #333;
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
-        .product p {
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
             font-size: 0.9rem;
+            color: #555;
         }
-
-        form input, form textarea, form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-
-        form button {
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        form button:hover {
-            background-color: #45a049;
-        }
-
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+		div {
+  text-align: justify;
+  text-justify: inter-word;
+}
     </style>
 </head>
 
@@ -166,14 +168,20 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">Medhayantra</div>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Medhayantralogo.png" alt="Medhayantra Logo">
+                </div>
+            </div>
+            <button class="login-btn" onclick="window.location.href='https://medhayantra.azurewebsites.net/Identity/Account/Login'">Login</button>
             <nav class="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#research">Research</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -188,72 +196,61 @@
             <a href="#products" class="cta">Explore Our Products</a>
         </div>
     </section>
-
-    <!-- About Us -->
-    <section id="about" class="about">
+	
+	
+	
+	 <section id="about" class="hero">
         <div class="container">
-            <h2>About Us</h2>
-            <p>Medhayantra is a pioneer in IoT-based sensor automation, delivering cutting-edge solutions for precision farming, industrial automation, and smart living. Our team of experts is dedicated to advancing technology to improve efficiency and sustainability.</p>
-        </div>
-    </section>
+            <h2>About US</h1>
+            <p>Medhayantra is a leading private company based in Nepal, specializing in advanced IoT-based sensors and automation solutions. Our expertise spans across various domains, including smart agriculture, precision farming, industrial automation, cold store monitoring, and home automation. With a focus on precision agriculture, we provide cutting-edge solutions that enhance farm productivity and sustainability through real-time monitoring and automated systems. Our offerings in IoT automation and sensor technologies enable businesses to streamline operations, improve efficiency, and reduce costs across multiple sectors. Medhayantra has collaborated with prestigious research institutions such as the National Agriculture Research Center (NARC), National Citrus Research Program (NCRP), and Regional Agriculture Research Center (RARS), gaining invaluable insights into the latest advancements in agriculture. This enables us to continually refine and enhance our products and services, ensuring they meet the highest standards of innovation and reliability. Our diverse range of services includes: Smart Home & Commercial Building Solutions Real-Time Farm Monitoring Cold Store Monitoring Systems Smart Manufacturing Metrics & KPIs Monitoring Tools Industrial Design & Automation IoT Sensors for Smart Measurement & Data Logging Groundwater Level Indicators Rainfall Simulators Soil Moisture & Temperature Monitoring Smart Water Management Systems At Medhayantra, our mission is to deliver innovative and tailored IoT-based sensor and automation solutions that help optimize operations, minimize waste, and improve efficiency. We are committed to becoming a trusted leader in providing advanced IoT solutions not only in Nepal but also in global markets.</p>
 
-    <!-- Products -->
-    <section id="products" class="products">
+    <!-- Team Section -->
+    <section id="team">
         <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-list">
-                <div class="product">
-                    <h3>i-Switch Control</h3>
-                    <p>Smart switching solution for energy efficiency.</p>
+            <h2>Meet Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="ritu.jpg" alt="Dr. Ritu Raj Lamsal">
+                    <h3>Dr. Ritu Raj Lamsal PhD eng., FIE</h3>
+                    <p>Founder, CEO & IoT Specialist</p>
                 </div>
-                <div class="product">
-                    <h3>Real-Time Monitoring</h3>
-                    <p>Track and visualize critical data in real-time.</p>
+                <div class="team-member">
+                    <img src="bharat.jpg" alt="Er. Bharat Panthee">
+                    <h3>Er. Bharat Panthee</h3>
+                    <p>Co-founder, CTO & Web/Cloud Specialist</p>
                 </div>
-                <div class="product">
-                    <h3>Smart Water Tank Monitoring</h3>
-                    <p>Ensure water levels are optimized for usage.</p>
+                <div class="team-member">
+                    <img src="sunil.jpg" alt="Dr. Sunil Chaudhary">
+                    <h3>Dr. Sunil Chaudhary</h3>
+                    <p>Director, Research and Project Management</p>
+                </div>
+                <div class="team-member">
+                    <img src="umesh.jpg" alt="Dr. Umesh Acharya">
+                    <h3>Dr. Umesh Acharya</h3>
+                    <p>Senior Ag. Scientist & Adviser</p>
+                </div>
+                <div class="team-member">
+                    <img src="mamta.jpg" alt="Er. Mamta Bhattarai">
+                    <h3>Er. Mamta Bhattarai</h3>
+                    <p>AI Researcher</p>
+                </div>
+                <div class="team-member">
+                    <img src="bindu.jpg" alt="Er. Bindu Pathak">
+                    <h3>Er. Bindu Pathak</h3>
+                    <p>Quality and Test Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="skand.jpg" alt="Skand Lamsal">
+                    <h3>Skand Lamsal</h3>
+                    <p>IoT Intern</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>From precision farming in Nepal to industrial IoT solutions, explore how Medhayantra is transforming industries with innovative technology.</p>
-        </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2>Research</h2>
-            <p>Discover our latest publications and collaborations in advancing IoT technologies for global applications.</p>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: medhayantra@gmail.com</p>
-            <p>Phone: +977 9804437197</p>
-            <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Medhayantra. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Medhayantra. All rights reserved.</p>
     </footer>
 </body>
 
