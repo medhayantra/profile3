@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medhayantra | IoT Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .header .login-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .login-btn:hover {
+            background-color: #45a049;
+            color: #fff;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav ul li a:hover {
+            color: #c2f2c2;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta:hover {
+            background-color: #45a049;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            background-color: #1ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+		.social-media img {
+			height: auto;
+			width: auto;
+			margin-left: auto;
+		}
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: #555;
+        }	
+
+		.column {
+			float: left;
+			width: 33.33%;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}		
+		
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Images/Medhayantralogo.png" alt="Medhayantra Logo">
+                </div>
+            </div>
+            <button class="login-btn" onclick="window.location.href='https://medhayantra.azurewebsites.net/Identity/Account/Login'">Login</button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#team">Team</a></li>                   
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Medhayantra</h1>
+            <p>Innovating Today, Transforming Futures.</p>
+            <a href="#services" class="cta">Explore Our Services</a>
+        </div>
+    </section>
+	
+	<section id="about" class="hero">
+        <div class="container">
+            <h2>About US</h2>
+            <p>Medhayantra is an innovative company committed to providing businesses of all sizes with state-of-the-art digital solutions at competitive prices.  We specialized in Internet of Things (IoT)-driven solutions, and cybersecurity solutions, with a mission to transform industries through technology.</p> 
+			<p>Our team of skilled professionals is committed to helping clients streamline operations, enhance user experiences, and accelerate growth through customized, scalable tech solutions. At Medhayantra, we believe in the power of collaboration, creativity, and innovation to solve complex challenges and drive the digital future.</p>
+		</div>
+	</section>
+	
+	<!-- Service Section -->
+	<section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+				<div class="column"> 
+					<img src="Images/iot.png" alt="IoT" style="width: 150px; height: 150px;">
+                    <h3>Internet of Things</h3>
+                    <p>Our comprehensive IoT offerings will help your organizations seamlessly connect, monitor, and manage devices across a wide range of industries, including healthcare, manufacturing, logistics, and smart homes.</p>
+				</div>
+				<div class="column"> 
+					<<img src="Images/cybersec.png" alt="CyberSec" style="width: 150px; height: 150px;">
+                    <h3>Cybersecurity</h3>
+                    <p>Our expert team works to protect your sensitive data, critical infrastructure, and business operations from cyberattacks, ensuring the highest levels of security and compliance for organizations.</p>
+				</div>
+				<div class="column"> 
+					<img src="Images/training.png" alt="TecTraining" style="width: 150px; height: 150px;">
+                    <h3>Training</h3>
+                    <p>Our specialized technology training services are designed to empower your workforce with the skills needed to succeed in today’s rapidly evolving digital landscape.</p>
+				</div>
+			</div>
+		</div>			
+	</section>
+	
+	<!-- Product Section -->
+	<section id="products">
+        <div class="container">
+            <h2>Our Innovative Products</h2>
+            <div class="row">
+				<div class="column"> 
+					<h3>i-Switch Control</h3>
+                    <p> An application that would allow you to remotely control your electronic or electrical devices/home appliances, like lights, fans, motor pumps, air conditioners, etc., using the internet.</p>
+				</div>
+				<div class="column"> 
+					<h3>Real Time Data Acquisition and Visualization</h3>
+                    <p>An application that would allow you to acquire remote sensor data and view it in real-time with a visual representation and analytics that can be accessed from anywhere. </p>
+				</div>
+				<div class="column"> 
+					<h3>Real time Machine Monitoring and Utilization</h3>
+                    <p>An application that would allow you to keep remote track of the machine's utilization in manufacturing and production plants.</p>
+				</div>
+			</div>				
+			<div class="row">				
+				<div class="column"> 
+					<h3>Scheduled Auto-Control Switch</h3>
+                    <p>An application that would allow you to control your devices automatically based on the pre-scheduled date and time.</p>
+				</div>
+				<div class="column"> 
+					<h3>Smart Class Timetable</h3>
+                    <p>An application that would allow you to keeps remote track of the regular class timetable and alerts the teacher to help maintaining the schedule time.</p>
+				</div>
+				<div class="column"> 
+					<h3>Smart Water Tank Monitoring</h3>
+                    <p>An application that would allow you to remotely monitor an underground reserved tank as well as an overhead tank and control the motor pump.</p>
+				</div>				
+			</div>
+		</div>			
+	</section>
+	
+	
+	<!-- Project Section -->
+	<section id="projects">
+        <div class="container">
+            <h2>Our Projects</h2>			
+            <div class="row">
+				<div class="column"> 
+					<h4>Project 1</h4>
+                    <p> Project 1 running .</p>
+				</div>
+				<div class="column"> 
+					<h4>Project 2</h4>
+                    <p>Project 2 running. </p>
+				</div>
+				<div class="column"> 
+					<h4>Project 3</h4>
+                    <p>Project 3 running.</p>
+				</div>
+			</div>			
+		</div>			
+	</section>
+	
+	
+	<!-- Research Section -->
+	<section id="research">
+        <div class="container">
+            <h2>Our Publications</h2>			
+            <div class="row">
+				<div class="column"> 
+					<h4>Publication 1</h4>
+                    <p>This publication...</p>
+				</div>				
+			</div>	
+			<div class="row">
+				<div class="column"> 
+					<h4>Publication 2</h4>
+                    <p>This publication...</p>
+				</div>				
+			</div>				
+		</div>			
+	</section>
+	
+	
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="Images/ritu.jpg" alt="Dr. Ritu Raj Lamsal">
+                    <h3>Dr. Ritu Raj Lamsal PhD eng., FIE</h3>
+                    <p>Founder, CEO & IoT Specialist</p>
+					<div class="social-media">
+						<a href="https://www.linkedin.com/in/dr-ritu-raj-lamsal-phd-engg-fie-8255b211a/" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>
+                </div>
+                <div class="team-member">
+                    <img src="Images/bharat.jpg" alt="Er. Bharat Panthee">
+                    <h3>Er. Bharat Panthee</h3>
+                    <p>Co-founder, CTO & Web/Cloud Specialist</p>
+					<div class="social-media">
+						<a href="" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>	
+                </div>
+                <div class="team-member">
+                    <img src="Images/sunil.png" alt="Dr. Sunil Chaudhary">
+                    <h3>Dr. Sunil Chaudhary</h3>
+                    <p>Director-Research and Project Management & Cybersecurity Specialist</p>
+					<div class="social-media">
+						<a href="https://np.linkedin.com/in/sunil-chaudhary-6793831a" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>
+                </div>
+                <div class="team-member">
+                    <img src="Images/umesh.jpg" alt="Dr. Umesh Acharya">
+                    <h3>Dr. Umesh Acharya</h3>
+                    <p>Senior Ag. Scientist & Adviser</p>
+					<div class="social-media">
+						<a href="https://np.linkedin.com/in/umesh-acharya-phd-042b3a55" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>					
+                </div>
+                <div class="team-member">
+                    <img src="Images/mamta.png" alt="Er. Mamta Bhattarai">
+                    <h3>Er. Mamta Bhattarai</h3>
+                    <p>AI Researcher</p>
+					<div class="social-media">
+						<a href="https://np.linkedin.com/in/mamta-bhattarai-18581610a" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>	
+                </div>
+                <div class="team-member">
+                    <img src="Images/bindu.jpg" alt="Er. Bindu Pathak">
+                    <h3>Er. Bindu Pathak</h3>
+                    <p>Quality and Test Engineer</p>
+					<div class="social-media">
+						<a href="" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>	
+                </div>
+                <div class="team-member">
+                    <img src="Images/skand.jpg" alt="Skand Lamsal">
+                    <h3>Skand Lamsal</h3>
+                    <p>IoT Intern</p>
+					<div class="social-media">
+						<a href="" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn icon"></a>
+					</div>	
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Contact Section -->
+	
+	<section id="contact">
+        <div class="container">
+            <h2>Get in Touch With Us</h2>
+			
+				<img src="Images/mail.png" alt="email icon" style="width: 50px; height: 50px;" />  	
+				<p><b>medhayantra (at) gmail.com</b></p>				  
+			
+				<img src="Images/call.png" alt="phone icon" style="width: 50px; height: 50px;" />	
+				<p><b>(+977) 9804437197, 9860334676, 9817498808</b></p>          		
+					
+		</div>
+
+	</section>
+	
+	
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p align="center">&copy; <script>document.write(new Date().getFullYear())</script> Medhayantra. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
